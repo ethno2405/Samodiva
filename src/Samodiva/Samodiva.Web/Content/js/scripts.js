@@ -1,6 +1,3 @@
-include('Content/js/switcher.js')
-
-
 $(window).load(function(){
 	var nav=$('nav')
 		,content=$('#content')

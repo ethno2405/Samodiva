@@ -1,4 +1,6 @@
-﻿@{
+﻿@using System.Web.Optimization;
+
+@{
     Layout = null;
 }
 
@@ -17,9 +19,6 @@
     <link href="~/Content/css/layout.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="~/Content/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon" />
-    <script src="~/Content/js/jquery.min.js" type="text/javascript"></script>
-    <script src="~/Content/js/scripts.js" type="text/javascript"></script>
-    <script src="~/Content/js/switcher.js" type="text/javascript"></script>
     <!--[if lt IE 8]>
   <div class='alc' style=' clear: both; text-align:center; position: relative; z-index:9999;'>
     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -39,47 +38,72 @@
         <article id="content">
             <div class="inner">
                 <h1><a href="#!/splash">
-                    <img src="~/Content/images/logo.png" alt="" /></a></h1>
+                    <img src="~/Content/images/logo.png" alt="" />
+                </a>
+                </h1>
                 <nav>
                     <ul>
-                        <li class="li-1"><a href="#!/about_studio">//  about studio</a></li>
-                        <li class="li-2"><a href="#!/our_staff">//   our staff</a></li>
-                        <li class="li-3"><a href="#!/classes">//   classes</a></li>
-                        <li class="li-4"><a href="#!/contacts">//  contacts</a></li>
+                        <li class="li-1"><a href="#!/news">// новини</a></li>
+                        <li class="li-2"><a href="#!/gallery">// галерия</a></li>
+                        <li class="li-3"><a href="#!/our_staff">// за нас</a></li>
+                        <li class="li-4"><a href="#!/contacts">// контакти</a></li>
                     </ul>
                 </nav>
                 <img src="~/Content/images/logo-illus.png" alt="" class="illus" />
                 <div class="next-btns">
                     <ul class="next-btns">
-                        <li class="li-1"><a href="#!/about_studio">
-                            <img src="~/Content/images/next.png" alt="" /></a></li>
-                        <li class="li-2"><a href="#!/our_staff">
-                            <img src="~/Content/images/next.png" alt="" /></a></li>
-                        <li class="li-3"><a href="#!/classes">
-                            <img src="~/Content/images/next.png" alt="" /></a></li>
-                        <li class="li-4"><a href="#!/contacts">
-                            <img src="~/Content/images/next.png" alt="" /></a></li>
+                        <li class="li-1">
+                            <a href="#!/news">
+                                <img src="~/Content/images/next.png" alt="" />
+                            </a>
+                        </li>
+                        <li class="li-2">
+                            <a href="#!/gallery">
+                                <img src="~/Content/images/next.png" alt="" />
+                            </a>
+                        </li>
+                        <li class="li-3">
+                            <a href="#!/our_staff">
+                                <img src="~/Content/images/next.png" alt="" />
+                            </a>
+                        </li>
+                        <li class="li-4">
+                            <a href="#!/contacts">
+                                <img src="~/Content/images/next.png" alt="" />
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <ul class="pages">
                     <li id="splash"></li>
-                    <li id="about_studio">
-                        <h2><span><span>1</span></span>welcome!</h2>
-                        <img src="~/Content/images/about-img-1.png" class="blo" alt="" />
+                    <li id="news">
+                        <h2><span><span>1</span></span>новини!</h2>
+                        <ul class="list">
+                            <li><a href="#">Пловдив древен и вечен 2013</a></li>
+                            <li><a href="#">Предколедна промоция</a></li>
+                            <li><a href="#">Нови групи</a></li>
+                            <li><a href="#">Дипломите са осигурени от "Poligrafia"</a></li>
+                            <li><a href="#">Купи и медали от К&K спорт</a></li>
+                        </ul>
+                        <ul class="list">
+                            <li><a href="#">Участията се разрастват</a></li>
+                            <li><a href="#">народни танци</a></li>
+                            <li><a href="#">Отворени врати</a></li>
+                            <li><a href="#">Първи сватбен танц</a></li>
+                            <li><a href="#">Успехите ни...</a></li>
+                        </ul>
+
+                        @*<img src="~/Content/images/about-img-1.png" class="blo" alt="" />
                         <p class="bold upc p1">
-                            Fesaugiat maluadas orb nae feugorbilorer keroa 
-as nae dedskertsdefer lerose merbraesrto mertasedears
-selertdaker tsdefer lerose merrose kertase.
+                            новини новини новини новини новини новини новини новини новини новини новини новини новини новини 
                         </p>
                         <p>
-                            Kasesertolor sit aconsectetuer adipiscing el auris ferme ntertyuades kertya
-laoreet aliquam leo. Ut tellus doloapibus elementum velcursulit. Aeneauis rityamertalasera
-et urna. Aliquam erat volutpat. Duis ac turpiseg utrum aneu lacus.
+                            новини новини новини новини новини новини новини новини новини новини новини новини новини новини 
                         </p>
-                        <a href="#!/readmore" class="btn">learn more</a>
+                        <a href="#!/readmore" class="btn">learn more</a>*@
                     </li>
-                    <li id="our_staff">
-                        <h2><span><span>2</span></span>our staff</h2>
+                    <li id="gallery">
+                        <h2><span><span>2</span></span>галерия</h2>
                         <ul class="list">
                             <li><a href="#">Andrew Cesan</a></li>
                             <li><a href="#">Richie Cesan</a></li>
@@ -94,8 +118,8 @@ et urna. Aliquam erat volutpat. Duis ac turpiseg utrum aneu lacus.
                             <li><a href="#">Melanie Staple</a></li>
                         </ul>
                     </li>
-                    <li id="classes">
-                        <h2><span><span>3</span></span>classes</h2>
+                    <li id="our_staff">
+                        <h2><span><span>3</span></span>за нас</h2>
                         <div class="col-1 alr">
                             <ul class="r-menu">
                                 <li><a href="#">Lecegast</a></li>
@@ -122,7 +146,7 @@ Et urna badtdiquam erat volutpat. Duis ac turpiseg utrum aneu lacus.
                         <a href="#!/readmore" class="btn">view timetable</a>
                     </li>
                     <li id="contacts">
-                        <h2><span><span>4</span></span>contacts</h2>
+                        <h2><span><span>4</span></span>контакти</h2>
                         <img src="~/Content/images/contacts-img-1.png" class="blo" alt="" />
                         <dl class="address">
                             <dt>9863 - 9867 Mill Road,<br>
@@ -190,7 +214,8 @@ Et urna badtdiquam erat volutpat. Duis ac turpiseg utrum aneu lacus.
         </article>
         <div class="track">
             <a href="javascript:void(0)">
-                <img src="~/Content/images/track.png" alt="" /></a>
+                <img src="~/Content/images/track.png" alt="" />
+            </a>
         </div>
         <footer>
             <ul class="soc-ico">
@@ -208,7 +233,7 @@ Et urna badtdiquam erat volutpat. Duis ac turpiseg utrum aneu lacus.
         </footer>
     </div>
     <div>
-        @RenderSection("script", false)
+        @Scripts.Render("~/Content/js/jquery", "~/Content/js/switcher", "~/Content/js/scripts")
     </div>
 </body>
 </html>
