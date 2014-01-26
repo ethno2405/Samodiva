@@ -1,0 +1,6 @@
+List of Fonts used in template 
+
+Damion		http://www.google.com/webfonts/specimen/Damion
+Lato		http://www.google.com/webfonts/specimen/Lato
+Signika Negative	http://www.google.com/webfonts/specimen/Signika+Negative
+Terminal dosis	http://www.google.com/webfonts/specimen/Terminal+Dosis

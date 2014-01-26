@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,6 +114,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -121,6 +125,43 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\ie_style.css" />
+    <Content Include="Content\css\layout.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\about-img-1.png" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\back.png" />
+    <Content Include="Content\images\body-bg.jpg" />
+    <Content Include="Content\images\circle.png" />
+    <Content Include="Content\images\contacts-img-1.png" />
+    <Content Include="Content\images\content-bg.png" />
+    <Content Include="Content\images\facebook.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\h2-bdr.png" />
+    <Content Include="Content\images\home-lnk.png" />
+    <Content Include="Content\images\logo-illus.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\mail-ico.png" />
+    <Content Include="Content\images\mrk-1.png" />
+    <Content Include="Content\images\next.png" />
+    <Content Include="Content\images\parts-1.png" />
+    <Content Include="Content\images\parts-10.png" />
+    <Content Include="Content\images\parts-11.png" />
+    <Content Include="Content\images\parts-2.png" />
+    <Content Include="Content\images\parts-3.png" />
+    <Content Include="Content\images\parts-4.png" />
+    <Content Include="Content\images\parts-5.png" />
+    <Content Include="Content\images\parts-6.png" />
+    <Content Include="Content\images\parts-7.png" />
+    <Content Include="Content\images\parts-8.png" />
+    <Content Include="Content\images\parts-9.png" />
+    <Content Include="Content\images\star.png" />
+    <Content Include="Content\images\track.png" />
+    <Content Include="Content\images\twitter.png" />
+    <Content Include="Content\js\html5.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\scripts.js" />
+    <Content Include="Content\js\switcher.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -133,11 +174,26 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samodiva.Common\Samodiva.Common.csproj">
+      <Project>{9d8cb6e1-d77c-4939-8fcd-1756b3ab63c3}</Project>
+      <Name>Samodiva.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samodiva.DataAccess\Samodiva.DataAccess.csproj">
+      <Project>{c5152864-281e-472f-b402-9f2abd0fc23e}</Project>
+      <Name>Samodiva.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -155,9 +211,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>51757</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52900/</IISUrl>
+          <IISUrl>http://localhost:4000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -167,6 +223,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
