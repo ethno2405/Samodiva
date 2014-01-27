@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System;
+using System.Diagnostics.Contracts;
 using System.Web.Mvc;
 
 namespace Samodiva.Web
@@ -7,6 +8,8 @@ namespace Samodiva.Web
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            Contract.Requires<ArgumentNullException>(filters != null);
+
             filters.Add(new HandleErrorAttribute());
         }
     }
