@@ -12,8 +12,7 @@ namespace Samodiva.Web
 
         private static void Scripts(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/Content/js")
-                //.Include("~/Content/js/jquery.min.js")
+            bundles.Add(new ScriptBundle("~/js/main")
                 .Include("~/Content/js/switcher.js")
                 .Include("~/Content/js/scripts.js"));
         }
