@@ -1,0 +1,31 @@
+﻿@model Samodiva.Web.Areas.Admin.Models.Gallery.VideoModel
+
+@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm("Edit", "Video", FormMethod.Post, new { id = "preview-form" }))
+    {
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            @Html.TextBoxFor(x => x.Title)
+        </div>
+        <div>
+            @Html.TextBoxFor(x => x.Url)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Date, Model.Date.ToString())
+        </div>
+        <div>
+            <iframe width="995" height="560" src="@Model.DownloadUrl"></iframe>
+        </div>
+        <div>
+            @Html.TextAreaFor(x => x.Description)
+        </div>
+        
+        <a href="javascript:{}" onclick="document.getElementById('preview-form').submit(); return false;">Запис</a>
+        @Html.ActionLink("Отказ", "Index", "Gallery")
+    }
+</div>

@@ -1,64 +1,34 @@
-﻿@using MvcPaging
-
-@model IPagedList<Samodiva.Web.Areas.Admin.Models.News.NewsModel>
+﻿@model IList<Samodiva.Web.Areas.Admin.Models.News.NewsModel>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-@using (Html.BeginForm("index", "news", FormMethod.Get))
-{
-    <table>
-        <thead>
+<table>
+    <thead>
+        <th>
+            <td>
+                <input id="check-all-news" type="checkbox" />
+            </td>
+            <td>
+                Дата
+            </td>
+            <td>
+                Заглавие
+            </td>
+        </th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>
-                    <input id="check_all" type="checkbox" value="" />
-                </th>
-                <th>Дата</th>
-                <th>Заглавие</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        <input type="checkbox" value="@item.Id" />
-                    </td>
-                    <td>
-                        @item.Date.ToString()
-                    </td>
-                    <td>
-                        @Html.ActionLink(item.Title, "preview", new { id = item.Id })
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table> 
-    <div class="pager">
-         @Html.Raw(Html.Pager(
-            new Options
-            {
-                PageSize = Model.PageSize,
-                TotalItemCount = Model.TotalItemCount,
-                CurrentPage = Model.PageNumber,
-                ItemTexts = new ItemTexts() { Next = "Напред", Previous = "Назад", First = "Първа", Last = "Последна" },
-                TooltipTitles = new TooltipTitles() { First = "Първа страница", Last = "Последна страница", Next = "Следваща страница {0}", Previous = "Предишна страница {0}", Page = "Страница {0}" },
-                Size = Size.normal,
-                Alignment = Alignment.centered,
-                IsShowControls = true,
-                IsShowFirstLast = true,
-                IsShowPages = true
-            }, new { }))
-    </div>
-}
-
-@section script
-{
-    <script type="text/javascript">
-        $(function () {
-            $('a').tooltip();
-        });
-    </script>
-}
+                <td>
+                    <input type="checkbox" value="@item.Id" class = "news-check" />
+                </td>
+                <td>@item.Date</td>
+                <td>@Html.ActionLink(item.Title, "preview", new { id = item.Id })</td>
+            </tr>   
+        }
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model IList<Samodiva.Web.Areas.Admin.Models.Gallery.VideoModel>
+
+<ul class="header">
+    <li>
+        <div>
+            <input type="checkbox" id="check-all-videos" />
+        </div>
+        <div>Дата</div>
+        <div>Заглавие</div>
+        <div>Описание</div>
+        <div></div>
+    </li>
+</ul>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <div>
+                <input type="checkbox" value="@item.Id" class="video-check" />
+            </div>
+            <div>@item.Date</div>
+            <div>@Html.ActionLink(item.Title, "Preview", "Video", new { id = item.Id }, null)</div>
+            <div>@item.Description</div>
+            <div>
+                <img src="@item.ThumbUrl" alt="Thumbnail" />
+            </div>
+        </li>
+    }
+</ul>

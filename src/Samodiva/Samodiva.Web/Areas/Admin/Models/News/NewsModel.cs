@@ -9,6 +9,8 @@ namespace Samodiva.Web.Areas.Admin.Models.News
 
         public string Title { get; set; }
 
+        public string Body { get; set; }
+
         public DateTime Date { get; set; }
     }
 }

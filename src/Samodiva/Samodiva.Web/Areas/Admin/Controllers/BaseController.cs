@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Net;
 using System.Web.Mvc;
 using Samodiva.Common;
 
@@ -15,6 +12,11 @@ namespace Samodiva.Web.Areas.Admin.Controllers
         {
             logger = logger ?? new Logger(GetType());
             logger.LogException(filterContext.Exception);
+        }
+
+        protected ActionResult HttpBadRequest()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
     }
 }

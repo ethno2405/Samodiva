@@ -4,231 +4,111 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SamodivaDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="SamodivaDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="SamodivaDBModelStoreContainer">
-          <EntitySet Name="About_Us" EntityType="SamodivaDBModel.Store.About_Us" store:Type="Tables" store:Schema="dbo" store:Name="About_Us">
-            <DefiningQuery>SELECT 
-      [About_Us].[Text] AS [Text], 
-      [About_Us].[id] AS [id]
-      FROM [dbo].[About_Us] AS [About_Us]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Awards" EntityType="SamodivaDBModel.Store.Awards" store:Type="Tables" store:Schema="dbo" store:Name="Awards">
-            <DefiningQuery>SELECT 
-      [Awards].[id] AS [id], 
-      [Awards].[Title] AS [Title], 
-      [Awards].[Description] AS [Description], 
-      [Awards].[Image_Url] AS [Image_Url], 
-      [Awards].[Date] AS [Date]
-      FROM [dbo].[Awards] AS [Awards]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Costumes" EntityType="SamodivaDBModel.Store.Costumes" store:Type="Tables" store:Schema="dbo" store:Name="Costumes">
-            <DefiningQuery>SELECT 
-      [Costumes].[id] AS [id], 
-      [Costumes].[Title] AS [Title], 
-      [Costumes].[Description] AS [Description], 
-      [Costumes].[Image_Url] AS [Image_Url]
-      FROM [dbo].[Costumes] AS [Costumes]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="News" EntityType="SamodivaDBModel.Store.News" store:Type="Tables" store:Schema="dbo" store:Name="News">
-            <DefiningQuery>SELECT 
-      [News].[id] AS [id], 
-      [News].[Title] AS [Title], 
-      [News].[Body] AS [Body], 
-      [News].[Date] AS [Date]
-      FROM [dbo].[News] AS [News]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Options" EntityType="SamodivaDBModel.Store.Options" store:Type="Tables" store:Schema="dbo" store:Name="Options">
-            <DefiningQuery>SELECT 
-      [Options].[Id] AS [Id], 
-      [Options].[Key] AS [Key], 
-      [Options].[Value] AS [Value]
-      FROM [dbo].[Options] AS [Options]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Participants" EntityType="SamodivaDBModel.Store.Participants" store:Type="Tables" store:Schema="dbo" store:Name="Participants">
-            <DefiningQuery>SELECT 
-      [Participants].[id] AS [id], 
-      [Participants].[Name] AS [Name], 
-      [Participants].[Text] AS [Text], 
-      [Participants].[Date] AS [Date], 
-      [Participants].[Image_URL] AS [Image_URL]
-      FROM [dbo].[Participants] AS [Participants]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Pictures" EntityType="SamodivaDBModel.Store.Pictures" store:Type="Tables" store:Schema="dbo" store:Name="Pictures">
-            <DefiningQuery>SELECT 
-      [Pictures].[Id] AS [Id], 
-      [Pictures].[Title] AS [Title], 
-      [Pictures].[Description] AS [Description], 
-      [Pictures].[Date] AS [Date], 
-      [Pictures].[URL] AS [URL]
-      FROM [dbo].[Pictures] AS [Pictures]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Schedule" EntityType="SamodivaDBModel.Store.Schedule" store:Type="Tables" store:Schema="dbo" store:Name="Schedule">
-            <DefiningQuery>SELECT 
-      [Schedule].[Text] AS [Text], 
-      [Schedule].[id] AS [id]
-      FROM [dbo].[Schedule] AS [Schedule]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Users" EntityType="SamodivaDBModel.Store.Users" store:Type="Tables" store:Schema="dbo" store:Name="Users">
-            <DefiningQuery>SELECT 
-      [Users].[Id] AS [Id], 
-      [Users].[Username] AS [Username], 
-      [Users].[Password] AS [Password], 
-      [Users].[Last_Login_Date] AS [Last_Login_Date], 
-      [Users].[Last_Login_IP] AS [Last_Login_IP]
-      FROM [dbo].[Users] AS [Users]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Videos" EntityType="SamodivaDBModel.Store.Videos" store:Type="Tables" store:Schema="dbo" store:Name="Videos">
-            <DefiningQuery>SELECT 
-      [Videos].[Id] AS [Id], 
-      [Videos].[Title] AS [Title], 
-      [Videos].[URL] AS [URL], 
-      [Videos].[Description] AS [Description], 
-      [Videos].[Date] AS [Date], 
-      [Videos].[ThumbURL] AS [ThumbURL]
-      FROM [dbo].[Videos] AS [Videos]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="About_Us" EntityType="SamodivaDBModel.Store.About_Us" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Awards" EntityType="SamodivaDBModel.Store.Awards" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Costumes" EntityType="SamodivaDBModel.Store.Costumes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="News" EntityType="SamodivaDBModel.Store.News" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Options" EntityType="SamodivaDBModel.Store.Options" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Participants" EntityType="SamodivaDBModel.Store.Participants" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pictures" EntityType="SamodivaDBModel.Store.Pictures" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Schedule" EntityType="SamodivaDBModel.Store.Schedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="SamodivaDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Videos" EntityType="SamodivaDBModel.Store.Videos" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.About_Us' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="About_Us">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="Text" Type="ntext" />
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Awards' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Awards">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Date" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
           <Property Name="Description" Type="ntext" />
           <Property Name="Image_Url" Type="ntext" />
           <Property Name="Date" Type="datetime" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Costumes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Costumes">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Title" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
           <Property Name="Description" Type="ntext" />
           <Property Name="Image_Url" Type="text" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.News' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="News">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Date" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
           <Property Name="Body" Type="ntext" />
           <Property Name="Date" Type="datetime" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Options' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Options">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Key" />
-            <PropertyRef Name="Value" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Key" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Participants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Participants">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Name" />
-            <PropertyRef Name="Date" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="128" />
           <Property Name="Text" Type="ntext" />
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="Image_URL" Type="text" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Pictures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Pictures">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Date" />
-            <PropertyRef Name="URL" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
           <Property Name="Description" Type="ntext" />
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="128" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Schedule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Schedule">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="Text" Type="ntext" />
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Password" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="256" />
           <Property Name="Last_Login_Date" Type="datetime" />
           <Property Name="Last_Login_IP" Type="nvarchar" MaxLength="20" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'SamodivaDB.dbo.Videos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="Videos">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="URL" />
-            <PropertyRef Name="Date" />
-            <PropertyRef Name="ThumbURL" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="128" />
           <Property Name="URL" Type="text" Nullable="false" />
           <Property Name="Description" Type="ntext" />
           <Property Name="Date" Type="datetime" Nullable="false" />
           <Property Name="ThumbURL" Type="nvarchar" Nullable="false" MaxLength="128" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SamodivaDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -254,8 +134,6 @@
         <EntityType Name="Award">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Date" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
@@ -266,7 +144,6 @@
         <EntityType Name="Costume">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Title" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
@@ -276,8 +153,6 @@
         <EntityType Name="News">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Date" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
@@ -287,8 +162,6 @@
         <EntityType Name="Option">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Key" />
-            <PropertyRef Name="Value" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Key" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
@@ -297,8 +170,6 @@
         <EntityType Name="Participant">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Name" />
-            <PropertyRef Name="Date" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
@@ -309,9 +180,6 @@
         <EntityType Name="Picture">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Date" />
-            <PropertyRef Name="URL" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
@@ -329,8 +197,6 @@
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Password" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
@@ -341,10 +207,6 @@
         <EntityType Name="Video">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="URL" />
-            <PropertyRef Name="Date" />
-            <PropertyRef Name="ThumbURL" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />

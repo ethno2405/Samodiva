@@ -1,0 +1,22 @@
+﻿@model Samodiva.Web.Areas.Admin.Models.News.NewsModel
+
+@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm("edit", "news", FormMethod.Post, new { id = "preview-form" }))
+    {
+        @Html.HiddenFor(x => x.Id)
+        <div>@Html.TextBoxFor(x => x.Title)</div>
+        <div>
+            @Html.LabelFor(x => x.Date, Model.Date.ToString())
+            @Html.HiddenFor(x => x.Date)
+        </div>
+        <div>@Html.TextAreaFor(x => x.Body)</div>
+        
+        <a href="javascript:{}" onclick="document.getElementById('preview-form').submit(); return false;">Запис</a>
+        @Html.ActionLink("Отказ", "index", "news")
+    }
+</div>

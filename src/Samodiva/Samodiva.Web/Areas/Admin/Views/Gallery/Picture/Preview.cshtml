@@ -1,0 +1,28 @@
+﻿@model Samodiva.Web.Areas.Admin.Models.Gallery.PictureModel
+
+@{
+    ViewBag.Title = "PreviewPicture";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm("Edit", "Picture", FormMethod.Post, new { id = "preview-form" }))
+    {
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            @Html.TextBoxFor(x => x.Title)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Date, Model.Date.ToString())
+        </div>
+        <div>
+            <img src="@Model.Url" alt="Preview picture" />
+        </div>
+        <div>
+            @Html.TextAreaFor(x => x.Description)
+        </div>
+        
+        <a href="javascript:{}" onclick="document.getElementById('preview-form').submit(); return false;">Запис</a>
+        @Html.ActionLink("Отказ", "Index", "Gallery")
+    }
+</div>

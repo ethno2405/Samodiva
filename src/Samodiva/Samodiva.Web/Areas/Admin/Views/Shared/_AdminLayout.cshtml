@@ -3,15 +3,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    @Styles.Render("~/Content/css/backend")
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div>
+        <ul>
+            <li>@Html.ActionLink("Новини", "index", "news")</li>
+            <li>@Html.ActionLink("Галерия", "index", "gallery")</li>
+            <li>@Html.ActionLink("Най-добрите", "index", "thebest")</li>
+            <li>@Html.ActionLink("График", "index", "schedule")</li>
+            <li>@Html.ActionLink("За нас", "index", "staff")</li>
+        </ul>
+    </div>
+    <div>
         @RenderBody()
     </div>
     <div>
-        @Scripts.Render("~/Content/js/backend")
+        <script src="http://code.jquery.com/jquery-1.11.0.js" type="text/javascript"></script>
         @RenderSection("script", false)
     </div>
 </body>

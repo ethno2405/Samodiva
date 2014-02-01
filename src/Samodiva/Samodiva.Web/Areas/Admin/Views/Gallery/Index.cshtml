@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="videos">
+    @Html.Action("Videos", "Video", new { pageSize = 10, page = 1 })
+</div>
+<div class="pictures">
+    @Html.Action("Pictures", "Picture", new { pageSize = 10, page = 1 })
+</div>
